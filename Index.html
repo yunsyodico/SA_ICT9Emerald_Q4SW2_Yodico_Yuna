@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<!-- saved from url=(0041)file:///C:/Users/HP/Downloads/Index.html? -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+    <title>Math Challenge</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            text-align: center;
+            background-color: #blueviolet;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            margin: 0 0 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        input[type="number"] {
+            padding: 5px;
+            width: 100%;
+            margin-bottom: 50px;
+        }
+        button {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-right: 10px;
+        }
+      
+    </style>
+<style type="text/css" id="operaUserStyle"></style></head>
+<body>
+    <div class="container">
+        <h1>Math Challenge</h1>
+        <form>
+           <input type="number" id="x-input" value="4">
+            <input type="number" id="y-input" value="4">
+            <button onclick="calculateProduct()">Product</button>
+             <button onclick="calculateRemainder()">Remainder</button>
+            <button onclick="calculateExponent()">Exponent</button>
+            <button onclick="calculateEquality()">Equal</button>
+             <p id="result"></p>
+        </form>
+    </div>
+
+    <script>
+      const xInput = document.getElementById("x-input");
+      const yInput = document.getElementById("y-input");
+      const result = document.getElementById("result");
+
+     function calculateProduct() {
+        let x = parseFloat(xInput.value);
+        let y = parseFloat(yInput.value);
+        let product = x * y;
+        alert(`The product of x and y is: ${product}`);
+        result.textContent = `The product of x and y is: ${product}`;
+      }
+
+      function calculateRemainder() {
+        let x = parseFloat(xInput.value);
+        let y = parseFloat(yInput.value);
+        let remainder = x % y;
+        alert(`The remainder of x divided by y is: ${remainder}`);
+        result.textContent = `The remainder of x divided by y is: ${remainder}`;
+      }
+
+      function calculateExponent() {
+        let x = parseFloat(xInput.value);
+        let y = parseFloat(yInput.value);
+        let exponentiation = Math.pow(x, y);
+        alert(`x raised to the power of y is: ${exponentiation}`);
+        result.textContent = `x raised to the power of y is: ${exponentiation}`;
+      }
+
+      function calculateEquality() {
+        let x = parseFloat(xInput.value);
+        let y = parseFloat(yInput.value);
+        let equality = x === y;
+        if (equality) {
+          alert("x is equal to y!");
+        } else {
+          alert("x is not equal to y!");
+        }
+        result.textContent = `x is equal to y: ${equality}`;
+      }
+
+      function calculateAddition() {
+        let x = parseFloat(xInput.value);
+        let y = parseFloat(yInput.value);
+        let sum = x + y;
+        alert(`The sum of x and y is: ${sum}`);
+        result.textContent = `The sum of x and y is: ${sum}`;
+      }
+    </script>
+
+
+
+   
+</body></html>
